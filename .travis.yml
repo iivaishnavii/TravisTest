@@ -7,8 +7,8 @@ script:
   - docker images vramesh1028/node
 
 before_deploy:
-  - docker login -u vramesh1028 -p Lalithambika.69
-  
+  - docker login -u vramesh1028 -p 
+
 deploy:
   provider: script
   script: docker push vramesh1028/node
