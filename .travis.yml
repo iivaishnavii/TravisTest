@@ -5,3 +5,12 @@ services:
 script:
   - docker build -t vramesh1028/node .
   - docker images vramesh1028/node
+
+before_deploy:
+  - docker login -u vramesh1028 -p Hello@123
+
+deploy:
+  provider: script
+  script: docker push vramesh1028/node
+  on:
+    branch: master
